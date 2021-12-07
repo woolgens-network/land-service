@@ -32,4 +32,6 @@ public class Land {
     private LandBank bank;
     private LandSettings settings;
 
+    private Set<String> invites;
+
 }
