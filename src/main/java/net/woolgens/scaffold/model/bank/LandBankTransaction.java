@@ -14,4 +14,5 @@ public class LandBankTransaction {
     private double amount;
     private String issuer;
     private String type;
+    private long timestamp;
 }
