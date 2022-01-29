@@ -24,9 +24,15 @@ public class LandResource {
     LandService service;
 
     @GET
-    public Response getAll(@QueryParam("small") String small) {
+    public Response getAll(@QueryParam("sorted") String sorted,
+                           @QueryParam("pageindex") String pageIndex,
+                           @QueryParam("pagesize") String pageSize,
+                           @QueryParam("small") String small) {
         if(small != null) {
             return Response.ok(service.getAllSmallProjectedLands()).build();
+        }
+        if(sorted != null) {
+            return Response.ok(service.getAllSortedAndPaged(sorted, pageIndex, pageSize)).build();
         }
         return Response.ok(repository.listAll()).build();
     }

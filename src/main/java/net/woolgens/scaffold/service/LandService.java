@@ -1,6 +1,9 @@
 package net.woolgens.scaffold.service;
 
 import io.quarkus.cache.CacheResult;
+import io.quarkus.mongodb.panache.PanacheQuery;
+import io.quarkus.panache.common.Sort;
+import net.woolgens.scaffold.model.Land;
 import net.woolgens.scaffold.model.dto.LandNameDto;
 import net.woolgens.scaffold.repository.LandRepository;
 
@@ -24,5 +27,15 @@ public class LandService {
     @CacheResult(cacheName = "land-small")
     public List<LandNameDto> getAllSmallProjectedLands() {
         return repository.findAll().project(LandNameDto.class).list();
+    }
+
+    public List<Land> getAllSortedAndPaged(String sorted, String pageIndex, String pageSize) {
+        PanacheQuery<Land> query = repository.findAll(Sort.descending(sorted));
+        if(pageIndex != null && pageSize != null) {
+            try {
+                query.page(Integer.valueOf(pageIndex), Integer.valueOf(pageSize));
+            }catch (NumberFormatException ex) {}
+        }
+        return query.list();
     }
 }
