@@ -1,8 +1,8 @@
-package net.woolgens.scaffold.model;
+package net.woolgens.land.model;
 
 import io.quarkus.mongodb.panache.common.MongoEntity;
 import lombok.Data;
-import net.woolgens.scaffold.model.bank.LandBank;
+import net.woolgens.land.model.bank.LandBank;
 import org.bson.codecs.pojo.annotations.BsonId;
 
 import java.util.Map;

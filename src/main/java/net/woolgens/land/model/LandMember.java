@@ -1,4 +1,4 @@
-package net.woolgens.scaffold.model.bank;
+package net.woolgens.land.model;
 
 import lombok.Data;
 
@@ -9,10 +9,9 @@ import lombok.Data;
  * Written by Maga
  **/
 @Data
-public class LandBankTransaction {
+public class LandMember {
 
-    private double amount;
-    private String issuer;
-    private String type;
-    private long timestamp;
+    private String uuid;
+    private String name;
+    private String role;
 }

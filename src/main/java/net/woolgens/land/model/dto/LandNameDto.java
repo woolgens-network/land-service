@@ -1,9 +1,9 @@
-package net.woolgens.scaffold.model.dto;
+package net.woolgens.land.model.dto;
 
 import io.quarkus.mongodb.panache.common.ProjectionFor;
 import lombok.Getter;
 import lombok.Setter;
-import net.woolgens.scaffold.model.Land;
+import net.woolgens.land.model.Land;
 
 /**
  * Copyright (c) Maga, All Rights Reserved

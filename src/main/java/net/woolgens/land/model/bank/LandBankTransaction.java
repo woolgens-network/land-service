@@ -1,8 +1,6 @@
-package net.woolgens.scaffold.model;
+package net.woolgens.land.model.bank;
 
 import lombok.Data;
-
-import java.util.Map;
 
 /**
  * Copyright (c) Maga, All Rights Reserved
@@ -11,8 +9,10 @@ import java.util.Map;
  * Written by Maga
  **/
 @Data
-public class LandSettings {
+public class LandBankTransaction {
 
-    private String homeLocationValue;
-    private Map<String, Object> properties;
+    private double amount;
+    private String issuer;
+    private String type;
+    private long timestamp;
 }

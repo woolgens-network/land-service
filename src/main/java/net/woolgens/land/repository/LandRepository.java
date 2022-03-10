@@ -1,7 +1,7 @@
-package net.woolgens.scaffold.repository;
+package net.woolgens.land.repository;
 
 import io.quarkus.mongodb.panache.PanacheMongoRepositoryBase;
-import net.woolgens.scaffold.model.Land;
+import net.woolgens.land.model.Land;
 
 import javax.enterprise.context.ApplicationScoped;
 

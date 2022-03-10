@@ -1,11 +1,11 @@
-package net.woolgens.scaffold.service;
+package net.woolgens.land.service;
 
 import io.quarkus.cache.CacheResult;
 import io.quarkus.mongodb.panache.PanacheQuery;
 import io.quarkus.panache.common.Sort;
-import net.woolgens.scaffold.model.Land;
-import net.woolgens.scaffold.model.dto.LandNameDto;
-import net.woolgens.scaffold.repository.LandRepository;
+import net.woolgens.land.model.Land;
+import net.woolgens.land.model.dto.LandNameDto;
+import net.woolgens.land.repository.LandRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

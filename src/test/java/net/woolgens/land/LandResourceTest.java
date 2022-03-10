@@ -1,13 +1,11 @@
-package net.woolgens.scaffold;
+package net.woolgens.land;
 
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
-import net.woolgens.scaffold.auth.AuthWrapper;
-import net.woolgens.scaffold.model.Land;
-import net.woolgens.scaffold.repository.LandRepository;
-import net.woolgens.scaffold.resource.LandResource;
-import org.junit.jupiter.api.BeforeAll;
+import net.woolgens.land.model.Land;
+import net.woolgens.land.repository.LandRepository;
+import net.woolgens.land.resource.LandResource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

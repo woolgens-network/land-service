@@ -1,4 +1,4 @@
-package net.woolgens.scaffold.model;
+package net.woolgens.land.model;
 
 import lombok.Data;
 

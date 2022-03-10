@@ -1,6 +1,8 @@
-package net.woolgens.scaffold.model;
+package net.woolgens.land.model;
 
 import lombok.Data;
+
+import java.util.Map;
 
 /**
  * Copyright (c) Maga, All Rights Reserved
@@ -9,9 +11,8 @@ import lombok.Data;
  * Written by Maga
  **/
 @Data
-public class LandMember {
+public class LandSettings {
 
-    private String uuid;
-    private String name;
-    private String role;
+    private String homeLocationValue;
+    private Map<String, Object> properties;
 }

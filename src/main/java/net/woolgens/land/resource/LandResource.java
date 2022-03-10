@@ -1,17 +1,14 @@
-package net.woolgens.scaffold.resource;
+package net.woolgens.land.resource;
 
-import net.woolgens.scaffold.exception.LandException;
-import net.woolgens.scaffold.exception.impl.LandNotFoundException;
-import net.woolgens.scaffold.model.Land;
-import net.woolgens.scaffold.repository.LandRepository;
-import net.woolgens.scaffold.service.LandService;
+import net.woolgens.land.model.Land;
+import net.woolgens.land.repository.LandRepository;
+import net.woolgens.land.service.LandService;
+import net.woolgens.library.microservice.exception.ServiceException;
 
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
 import java.util.Optional;
 
 @Path("/lands")
@@ -39,10 +36,10 @@ public class LandResource {
 
     @GET
     @Path("/{id}")
-    public Land get(@PathParam("id") String id) throws LandException {
+    public Land get(@PathParam("id") String id) throws ServiceException {
         Optional<Land> landOptional = repository.findByIdOptional(id);
         if(!landOptional.isPresent()) {
-            throw new LandNotFoundException();
+            throw new ServiceException(404, "Land not found");
         }
         return landOptional.get();
     }
