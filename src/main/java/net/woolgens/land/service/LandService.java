@@ -24,7 +24,6 @@ public class LandService {
     LandRepository repository;
 
 
-    @CacheResult(cacheName = "land-small")
     public List<LandNameDto> getAllSmallProjectedLands() {
         return repository.findAll().project(LandNameDto.class).list();
     }
